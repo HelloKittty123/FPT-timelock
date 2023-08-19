@@ -1,0 +1,166 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+#encresult,
+#decresult {
+    word-break: break-all;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+h1 {
+    font-weight: 600 !important;
+    margin-top: 80px !important;
+}
+
+@media (max-width: 1600px) {
+    h1 {
+        margin-top: 40px !important;
+    }
+}
+
+img {
+    position: absolute;
+}
+
+.corner {
+    top: 0;
+    right: 0;
+}
+
+.logo {
+    top: 24px;
+    right: 34px;
+}
+
+.header-content {
+    font-size: 16px;
+}
+
+.content {
+    padding: 30px 120px 0;
+    display: flex;
+}
+
+.content-item {
+    background-color: rgba(3, 169, 244, 0.1);
+    border-radius: 20px;
+    padding: 24px 24px 40px !important;
+}
+
+.content-margin {
+    margin-right: 114px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.radio-label {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+input:checked + span {
+    font-weight: 500 !important;
+    color: #000000;
+}
+
+input[type="radio"]:not(:checked) + span:before {
+    border: 2px solid #979797 !important;
+}
+
+input[type="radio"]:checked + span:after {
+    background-color: rgba(24, 144, 255, 1) !important;
+    border: 2px solid rgba(24, 144, 255, 1) !important;
+}
+
+input[type="radio"].with-gap:checked + span:before {
+    border: 2px solid rgba(24, 144, 255, 1) !important;
+}
+
+.margin-top-40 {
+    margin-top: 40px !important;
+}
+
+.input-field > label {
+    position: relative !important;
+}
+
+.input-field.col label {
+    left: 0 !important;
+}
+
+.icon-text {
+    display: flex;
+    padding-left: 40px;
+}
+
+.icon-send {
+    left: 14px;
+    top: 34px;
+}
+
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #2196f3 !important;
+    box-shadow: 0 1px 0 0 #2196f3 !important;
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #2196f3 !important;
+    box-shadow: 0 1px 0 0 #2196f3 !important;
+}
+
+.button-wrap {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.button-wrap-decrypt {
+    padding-right: 20px !important;
+}
+
+.btn-current {
+    border: 1px solid #2196f3 !important;
+    background-color: white !important;
+    text-align: center;
+    color: #2196f3 !important;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    margin-right: 17px;
+}
+
+.btn-encrypt,
+.btn-decrypt {
+    border: 1px solid #2196f3 !important;
+    background-color: #2196f3 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn[disabled] {
+    border: 1px solid #dfdfdf !important;
+}
+
+blockquote {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}

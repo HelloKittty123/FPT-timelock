@@ -1,0 +1,56 @@
+extends layout
+
+block main
+  img.corner(src="/assets/images/corner.png" alt="corner")
+  img.logo(src="/assets/images/fpt.png" alt="fpt")
+  .container 
+    .row
+      .col.s12.center-align
+        div
+          .card-content
+            h1 Mã hóa khóa thời gian
+            p.header-content Phiên bản PoC chứng minh mã hóa khóa thời gian dựa trên mạng DrandDKG ngăn chặn các tấn công trước thời điểm xác định trong tương lại sử dụng BlockChain
+  .row.content
+    .col.m6.s12.content-item.content-margin
+      span.card-title Mã hóa giao dịch
+      .row
+        .col.s6
+          label
+            input.with-gap(name='enc' id='time' type='radio' checked=true)
+            span.radio-label Mã hóa
+        .col.s6            
+          label
+            input.with-gap(name='enc' id='round' type='radio')
+            span.radio-label Vòng
+        .input-field.col.s12#rounddiv
+          label(for='roundno') Vòng
+          input#roundno.validate(type='text')
+        #timediv
+          .input-field.col.s12.black-text.margin-top-40
+            label Ngày
+            input.datepicker(type='text')
+          .input-field.col.s12.black-text
+            label Giờ
+            input.timepicker(type='text')
+        
+        .input-field.col.s12
+          label(for='message') Thông điệp 
+          .icon-text
+            img.icon-send(src="/assets/images/send.png" alt="send") 
+            textarea#message.materialize-textarea
+      .row.button-wrap
+        a.waves-effect.waves-light.btn.btn-current(onclick='current()') Vòng hiện tại
+        a.waves-effect.waves-light.btn.btn-encrypt#encbutton(onclick='encrypt()',disabled="disabled") Mã hóa
+      blockquote#encresult.card-content Đây là nơi mà thông điệp mã hóa sẽ xuất hiện
+    .col.m6.s12.content-item
+      span.card-title Giải mã giao dịch
+      div
+      .input-field.col.s12
+        label(for='enc') Thông điệp
+        .icon-text
+          img.icon-send(src="/assets/images/send.png" alt="send") 
+          textarea#enc.materialize-textarea
+      .row
+        .col.s12.button-wrap.button-wrap-decrypt
+          a.waves-effect.waves-light.btn.btn-decrypt#decbutton(onclick='decrypt()',disabled="disabled") Giải mã
+      blockquote#decresult.card-content Đây là nơi mà thông điệp đã được giải mã sẽ xuất hiện
