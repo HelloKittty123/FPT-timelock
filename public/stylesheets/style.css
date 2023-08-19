@@ -111,6 +111,11 @@ input[type="radio"].with-gap:checked + span:before {
     top: 34px;
 }
 
+.icon-send-2 {
+    left: 0;
+    top: 34px;
+}
+
 textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #2196f3 !important;
     box-shadow: 0 1px 0 0 #2196f3 !important;
@@ -163,4 +168,9 @@ blockquote {
     height: 70px;
     display: flex;
     align-items: center;
+    margin-top: 40px !important;
+}
+
+.padding-left-0 {
+    padding-left: 0 !important;
 }
